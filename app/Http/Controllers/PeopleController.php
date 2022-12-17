@@ -14,14 +14,14 @@ class PeopleController extends Controller
         return response()->json(People::all(), 200);
     }
 
-    public function show(People $people): JsonResponse
+    public function show(People $person): JsonResponse
     {
-        return response()->json($people, 200);
+        return response()->json($person, 200);
     }
 
-    public function delete(People $people): JsonResponse
+    public function delete(People $person): JsonResponse
     {
-        $people->delete();
+        $person->delete();
 
         return response()->json(null,204);
     }
@@ -33,10 +33,10 @@ class PeopleController extends Controller
         return response()->json($people, 201);
     }
 
-    public function update(PeoplePostRequest $request, People $people): JsonResponse
+    public function update(PeoplePostRequest $request, People $person): JsonResponse
     {
-        $people->update($request->all());
+        $person->update($request->all());
 
-        return response()->json($people, 200);
+        return response()->json($person, 200);
     }
 }
