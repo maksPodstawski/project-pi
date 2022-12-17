@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PeoplePostRequest;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use App\Models\People;
 
 class PeopleController extends Controller
